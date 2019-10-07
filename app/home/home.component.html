@@ -1,0 +1,37 @@
+<div class="container" style="margin-top: 70px;">
+   
+    <form #homeform (ngSubmit) = "nextPage()" novalidate>
+      <div  class="form-group">
+        <label for="segment">Segment</label>
+        <select class="form-control" id="segment" (change)="onChangeSegment($event)" required>
+          <option value=" ">--------- SELECT SEGMENT FIRST-----------</option>
+          <option *ngFor="let s of segments" [value]="s.seg_id">{{s.seg_name}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+          <label for="manufacturer">Manufacturer</label>
+          <select class="form-control" id="manufacturer" (change)="onChangeManufacturers($event)" required>
+              <option value=" ">--------- SELECT MANUFACTURER-----------</option>
+            <option *ngFor="let m of manufacturers" [value]="m.man_id">{{m.man_name}}</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+          <label for="variant">Variant</label>
+          <select class="form-control" id="variant" (change)="sendVarid($event,variants)" required>
+              <option value=" ">--------- SELECT VARIANT-----------</option>
+            <option *ngFor="let v of variants" [value]="v.var_id">{{v.var_name}}</option>
+          </select>
+      </div>  
+      
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" class="form-control" id="quantity" min="15" max="30"
+        [(ngModel)]="va.min_qty" name="quantity" #quantity>
+      </div>
+      
+      <input *ngIf = "flag == true" type="submit" class="btn btn-success" value="Next" id="sub">
+    </form>
+
+</div>

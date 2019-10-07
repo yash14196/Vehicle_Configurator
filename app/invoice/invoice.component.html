@@ -1,0 +1,45 @@
+
+<p *ngFor="let a of altid">
+  {{a}}
+</p>
+<div class="container pd-80">
+  <div class="row">
+    <div class="col-md-8">
+      <p><b>DEFAULT FEATURES : </b></p>
+      <ul>
+          <li *ngFor = "let d of default"> {{d.description}} </li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+        <img *ngFor = "let v of varList " src={{v.image}} style="width:75%">
+        <!-- <p *ngFor = "let v of varList "><b>Price : {{this.total}}</b></p> -->
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  
+  <!--<div class="row" *ngFor = " let a of altColl; let i = index; ">
+    <div class="col-md-12" *ngFor = "let m of altColl[i]">
+        <div class="col-md-6"><p><b>Added Configuration : </b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{m.alt_desp}}</p></div>
+        <div class="col-md-6"><p><b>Price : </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{m.alt_price}}</p></div>
+    </div>
+  </div> -->
+
+  <!--<table class="table table-bordered">
+    <tr>
+      <th>Added Configuration</th>
+      <th>Added Configuration Price</th>
+      <th>Total:</th>
+    </tr>
+    <tr *ngFor = " let a of altColl; let i = index; ">
+      <div *ngFor = "let m of altColl[i]">
+          <td>{{m.alt_desp}}</td>
+          <td>{{m.alt_price}}</td>
+          <td>Total:</td>
+      </div>
+      
+    </tr>
+  </table> -->
+  <p>Your Total Amount = <b>{{this.baseprice| currency:'INR':true}}</b></p>
+</div>

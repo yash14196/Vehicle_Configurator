@@ -1,0 +1,59 @@
+<div class="container pd-80">
+  <div class="row">
+    <div class="col-md-8">
+        <div class="row">
+            <p class="wow slideInLeft"><b> DEFAULT FEATUERS :</b></p>
+
+            <ul>
+              <li *ngFor = "let default of defaultFeatures"> {{default.description}} </li>
+            </ul>
+        </div>
+      <div class="row">
+        <p class="wow slideInLeft"><b> STANDARD FEATUERS :</b></p>
+
+        <ul>
+          <li *ngFor = "let std of standardFeatures"> {{std.description}} </li>
+        </ul>
+      </div>
+      <br>
+      <div class="row">
+        <p class="wow slideInLeft"><b> INTERIOR FEATUERS :</b></p>
+
+        <ul>
+            <li *ngFor = "let interior of interiorFeatures"> {{interior.description}} </li>
+          </ul>
+      </div>
+      <div class="row">
+        <p class="wow slideInLeft"><b> EXTERIOR FEATUERS :</b></p>
+        <ul>
+            <li *ngFor = "let ext of exteriorFeatures"> {{ext.description}} </li>
+          </ul>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img *ngFor = "let v of variantsList " src={{v.image}}>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+        <p class="text-right"><b>TOTAL : </b></p>
+      </div>
+      <div class="col-md-6">
+          <p><b *ngFor = " let v of variantsList ">{{v.base_price| currency:'INR':true}} </b></p>
+      </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <p class=""><button class="btn btn-primary" routerLink="/configuration" (click)="deleteStorage()">Configure</button></p>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-success" routerLink="/confirm" (click)="invoice()">Confirm Order</button>  
+    </div>
+    <div class="col-md-4">
+      <p class=""> <button class="btn btn-danger" routerLink="/home">Cancel</button>  </p>
+    </div>
+  </div>
+</div>

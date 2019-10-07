@@ -1,0 +1,8 @@
+D:\Scott\C# Dot.NET\Vehicle_Conf\bin\Vehicle_Conf.dll
+D:\Scott\C# Dot.NET\Vehicle_Conf\bin\Vehicle_Conf.pdb
+D:\Scott\C# Dot.NET\Vehicle_Conf\obj\Debug\Vehicle_Conf.dll
+D:\Scott\C# Dot.NET\Vehicle_Conf\obj\Debug\Vehicle_Conf.pdb
+F:\PROJECT DOT NET FINAL\Vehicle_Conf\bin\Vehicle_Conf.dll
+F:\PROJECT DOT NET FINAL\Vehicle_Conf\bin\Vehicle_Conf.pdb
+F:\PROJECT DOT NET FINAL\Vehicle_Conf\obj\Debug\Vehicle_Conf.dll
+F:\PROJECT DOT NET FINAL\Vehicle_Conf\obj\Debug\Vehicle_Conf.pdb
